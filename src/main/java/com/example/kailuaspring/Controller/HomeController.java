@@ -9,5 +9,5 @@ public class HomeController {
     public String index() {
         return "home/RegisterUser";
     }
-        //test hej
+
 }
