@@ -70,3 +70,16 @@ body{
     background-color: #8c848f;
     border: #0090c1;
 }
+
+#registerBox{
+    background-color: #022f40;
+    height: 40%;
+    width: 40%;
+}
+.textInput{
+    background-color: #0090c1;
+}
+
+
+
+

@@ -6,7 +6,6 @@ public class Renter {
     private String address;
     private String zip;
     private String city;
-    private String mobilePhone;
     private String phone;
     private String email;
 }
