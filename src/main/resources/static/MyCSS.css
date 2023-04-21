@@ -73,9 +73,30 @@ body{
 
 #registerBox{
     background-color: #022f40;
-    height: 40%;
+    height: 900px;
     width: 40%;
+    position: absolute;
+    left: 30%;
+    text-align: right;
+    padding-right: 40px;
 }
 .textInput{
     background-color: #0090c1;
+    height: 60px;
+    width: 180px;
+    margin: 15px;
+
+
+}
+.textInput::placeholder{
+    color: black;
+}
+#login-box{
+    background-color: #022f40;
+    height: 300px;
+    width: 30%;
+    position: absolute;
+    text-align: right;
+    padding-right: 40px;
+    margin: 100px;
 }
