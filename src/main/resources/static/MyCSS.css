@@ -44,7 +44,6 @@ body{
     background: rgba(56, 174, 204, 0.7);
     font-size: 300%;
     border-radius: 25px;
-
 }
 #box1button {
     top: 30%;
@@ -61,12 +60,13 @@ body{
     height: 200px;
     width: 125px;
     border-radius: 50%;
-    opacity: 80%;
+    opacity: 0%;
     position: absolute;
     top: 30%;
     right: 31%;
 }
 #key:hover{
-    background-color: white;
-
+    opacity: 70%;
+    background-color: #8c848f;
+    border: #0090c1;
 }
