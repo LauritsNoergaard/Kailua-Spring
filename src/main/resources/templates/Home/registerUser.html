@@ -11,19 +11,43 @@
     </style>
 </head>
 <body>
+<div class="top-nav">
+    <a class="active" href="#home">Home</a>
+    <a href="#contact">About us</a>
+    <a href="#about">Contact us</a>
+</div>
 
+<h1>Register user</h1>
+<br>
+<br>
+<div id="registerBox">
 
-<div class="box">
-
-    <form action="somethingControlololoer" method="post" id="registerBox">
-        <input class="textInput" type="text" placeho="full name" name="name">
-        <input class="textInput" type="text" placeho="driver license number" name="driverLicenseNumber">
-        <input class="textInput" type="text" placeho="address" name="address">
-        <input class="textInput" type="text" placeho="zip" name="zip">
-        <input class="textInput" type="text" placeho="city" name="city">
-        <input class="textInput" type="text" placeho="phone number" name="phone">
-        <input class="textInput" type="text" placeho="email address" name="email">
-        <input class="textInput" type="submit">
+    <form action="createRenter" method="post" >
+        <label class="registerLabel">enter full name: </label>
+        <input class="textInput" type="text" placeholder="full name" name="name">
+        <br>
+        <label class="registerLabel">enter driver lisence number: </label>
+        <input class="textInput" type="text" placeholder="driver license number" name="driverLicenseNumber">
+        <br>
+        <label class="registerLabel"> enter address: </label>
+        <input class="textInput" type="text" placeholder="address" name="address">
+        <br>
+        <label class="registerLabel">enter zip code: </label>
+        <input class="textInput" type="text" placeholder="zip" name="zip">
+        <br>
+        <label class="registerLabel">enter city: </label>
+        <input class="textInput" type="text" placeholder="city" name="city">
+        <br>
+        <label class="registerLabel">enter phone number: </label>
+        <input class="textInput" type="text" placeholder="phone number" name="phone">
+        <br>
+        <label class="registerLabel">enter email address: </label>
+        <input class="textInput" type="text" placeholder="email address" name="email">
+        <br>
+        <label class="registerLabel">Enter a password: </label>
+        <input class="textInput" type="text" placeholder="password" name="password">
+        <br>
+        <input class="textInput" type="submit" value="Submit" style="background-color: green; color:white">
 
     </form>
 </div>

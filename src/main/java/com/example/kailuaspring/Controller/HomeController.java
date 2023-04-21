@@ -2,7 +2,6 @@ package com.example.kailuaspring.Controller;
 
 import com.example.kailuaspring.Model.Car;
 import com.example.kailuaspring.Service.CarService;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +18,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String index() {
-        return "home/rentCar";
+        return "home/index";
     }
 
     @PostMapping("/viewAvailableCars")
@@ -34,5 +33,14 @@ public class HomeController {
         System.out.println(toDate);
         System.out.println(carType);
         return "home/rentCar";
+    }
+    @GetMapping("/registerUserButton")
+    public String registerUser(){
+        return "home/registerUser";
+    }
+    @PostMapping("/createRenter")
+    public String createRenter(){
+
+        return "home/index";
     }
 }
