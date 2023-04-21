@@ -6,22 +6,32 @@
     <link rel="stylesheet" type="text/css" href="/MyCSS.css">
 </head>
 <body>
-    <h1>Pick your type of car to rent</h1>
+    <h1>Rent a car</h1>
+
     <div>
-        <button>Dropdown</button>
-        <div>
-            <a href="#">Big car</a>
-            <a href="#">Small car</a>
-            <a href="#">Very small car</a>
-        </div>
-        <form action="">
-            <input class="button" type="submit" value="Big car/truck">
-            <input class="button" type="submit" value="Family size car">
-            <input class="button" type="submit" value="Sports car">
-            <input class="button" type="submit" value="Luxury car">
-            <input class="button" type="submit" value="Smart car u jackass">
+        <form action="/viewAvailableCars" method="post">
+            <label for="rentCarFrom">When do you want to rent the car from?</label>
+            <input type="date" id="rentCarFrom" name="rentCarFrom">
+            <br>
+            <label for="rentCarFrom">When do you want to rent the car to?</label>
+            <input type="date" id="rentCarTo" name="rentCarTo">
+
+            <p>Pick the type of car you want</p>
+            <select name="carType" id="">
+                <option value="FAMILY">Family car</option>
+                <option value="SPORT">Sports car</option>
+                <option value="LUXURY">Luxury car</option>
+            </select>
+            <input type="submit" value="Search">
         </form>
 
+        <tr th:each="car: ${cars}">
+            <td th:text="${wish.wish_name}" style="background-color: #6a5db8;color:white;"/>
+            <td th:text="${wish.wish_desc}" style="background-color: #6a5db8;color:white;"/>
+            <td th:text="${wish.wish_price}" style="background-color: #6a5db8;color:white;"/>
+            <td th:text="${wish.wish_link}" style="background-color: #6a5db8;color:white;"/>
+        </tr>
     </div>
+
 </body>
 </html>
