@@ -8,4 +8,5 @@ public class Renter {
     private String city;
     private String phone;
     private String email;
+    private String password;
 }
