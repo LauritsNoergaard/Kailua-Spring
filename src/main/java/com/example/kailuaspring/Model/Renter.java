@@ -9,13 +9,12 @@ public class Renter {
     private String phone;
     private String email;
 
-    public Renter(String driverLicenseNumber, String name, String address, String zip, String city, String mobilePhone, String phone, String email) {
+    public Renter(String driverLicenseNumber, String name, String address, String zip, String city, String phone, String email) {
         this.driverLicenseNumber = driverLicenseNumber;
         this.name = name;
         this.address = address;
         this.zip = zip;
         this.city = city;
-        this.mobilePhone = mobilePhone;
         this.phone = phone;
         this.email = email;
     }
@@ -58,14 +57,6 @@ public class Renter {
 
     public void setCity(String city) {
         this.city = city;
-    }
-
-    public String getMobilePhone() {
-        return mobilePhone;
-    }
-
-    public void setMobilePhone(String mobilePhone) {
-        this.mobilePhone = mobilePhone;
     }
 
     public String getPhone() {
