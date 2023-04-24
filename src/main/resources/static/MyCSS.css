@@ -91,6 +91,7 @@ h1{
 
 #registerBox{
     background-color: #022f40;
+    border:1px solid white;
     height:auto;
     width: 40%;
     position: absolute;
@@ -114,12 +115,15 @@ h1{
 .textInput::placeholder{
     color: #022f40;
 }
-#login-box{
+#login-box {
     background-color: #022f40;
-    height: 300px;
+    border:1px solid white;
+    height: auto;
     width: 30%;
-    position: absolute;
     text-align: right;
-    padding-right: 40px;
-    margin: 100px;
+    justify-content: center;
+    padding: 30px 30px 30px 25px;
+    margin: 0 auto; /* Centrerer vandret */
+    margin-top: 30px;
 }
+
