@@ -23,4 +23,11 @@ public class CarRepo {
         List<Car> cars = template.query(sql, rowMapper, to_date, from_date, carType);
         return cars;
     }
+
+    public Car fetchCar(String regNum){
+        String sql = "SELECT * FROM kailua.car WHERE registration_number = ?";
+        RowMapper <Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
+        return template.queryForObject(sql, rowMapper, regNum);
+    }
+
 }
