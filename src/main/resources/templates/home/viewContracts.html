@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>View contracts</title>
+    <link rel="stylesheet" type="text/css" href="/MyCSS.css">
+
+</head>
+<body>
+<div class="top-nav">
+    <a class="active" href="/">Home</a>
+    <form method="get">
+        <a href="/logIn" id="login">Log In</a>
+    </form>
+    <form method="get">
+        <a href="/register" id="register">Register</a>
+    </form>
+    <a href="#contact">About us</a>
+    <a href="#about">Contact us</a>
+</div>
+
+  <h1>Below you will find your contracts</h1>
+
+
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Start date</th>
+        <th>End date</th>
+        <th>Driver license number</th>
+        <th>Odometer at start date</th>
+    </tr>
+    </thead>
+
+    <tr th:each="contract: ${contracts}">
+        <td th:text="${contract.contract_id}" style="background-color: #6a5db8;color:white;"/>
+        <td th:text="${contract.from_date_time}" style="background-color: #6a5db8;color:white;"/>
+        <td th:text="${contract.to_date_time}" style="background-color: #6a5db8;color:white;"/>
+        <td th:text="${contract.driver_license_number}" style="background-color: #6a5db8;color:white;"/>
+        <td th:text="${contract.odometer_at_start}" style="background-color: #6a5db8;color:white;"/>
+    </tr>
+</table>
+</body>
+</html>

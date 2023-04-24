@@ -1,44 +1,44 @@
 package com.example.kailuaspring.Model;
 
 public class Contract {
-    private String contractID;
-    private String fromDateTime;
-    private String toDateTime;
-    private String driverLicenseNumber;
-    private String registrationNumber;
-    private int odometerAtStart;
+    private String contract_id;
+    private String from_date_time;
+    private String to_date_time;
+    private String driver_license_number;
+    private String registration_number;
+    private int odometer_at_start;
 
-    public Contract(String contractID, String fromDateTime, String toDateTime, String driverLicenseNumber, String registrationNumber, int odometerAtStart) {
-        this.contractID = contractID;
-        this.fromDateTime = fromDateTime;
-        this.toDateTime = toDateTime;
-        this.driverLicenseNumber = driverLicenseNumber;
-        this.registrationNumber = registrationNumber;
-        this.odometerAtStart = odometerAtStart;
+    public Contract(String contract_id, String from_date_time, String to_date_time, String driverLicenseNumber, String registration_number, int odometer_at_start) {
+        this.contract_id = contract_id;
+        this.from_date_time = from_date_time;
+        this.to_date_time = to_date_time;
+        this.driver_license_number = driverLicenseNumber;
+        this.registration_number = registration_number;
+        this.odometer_at_start = odometer_at_start;
     }
 
-    public String getContractID() {
-        return contractID;
+    public String getContract_id() {
+        return contract_id;
     }
 
-    public void setContractID(String contractID) {
-        this.contractID = contractID;
+    public void setContract_id(String contract_id) {
+        this.contract_id = contract_id;
     }
 
-    public String getFromDateTime() {
-        return fromDateTime;
+    public String getFrom_date_time() {
+        return from_date_time;
     }
 
-    public void setFromDateTime(String fromDateTime) {
-        this.fromDateTime = fromDateTime;
+    public void setFrom_date_time(String from_date_time) {
+        this.from_date_time = from_date_time;
     }
 
-    public String getToDateTime() {
-        return toDateTime;
+    public String getTo_date_time() {
+        return to_date_time;
     }
 
-    public void setToDateTime(String toDateTime) {
-        this.toDateTime = toDateTime;
+    public void setTo_date_time(String to_date_time) {
+        this.to_date_time = to_date_time;
     }
 
     public String getDriverLicenseNumber() {
@@ -49,20 +49,20 @@ public class Contract {
         this.driverLicenseNumber = driverLicenseNumber;
     }
 
-    public String getRegistrationNumber() {
-        return registrationNumber;
+    public String getRegistration_number() {
+        return registration_number;
     }
 
-    public void setRegistrationNumber(String registrationNumber) {
-        this.registrationNumber = registrationNumber;
+    public void setRegistration_number(String registration_number) {
+        this.registration_number = registration_number;
     }
 
-    public int getOdometerAtStart() {
-        return odometerAtStart;
+    public int getOdometer_at_start() {
+        return odometer_at_start;
     }
 
-    public void setOdometerAtStart(int odometerAtStart) {
-        this.odometerAtStart = odometerAtStart;
+    public void setOdometer_at_start(int odometer_at_start) {
+        this.odometer_at_start = odometer_at_start;
     }
 
 

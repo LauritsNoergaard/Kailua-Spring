@@ -56,14 +56,13 @@ public class HomeController {
     }
 
     @PostMapping("/viewAvailableCars")
-    public String viewAvailableCars(WebRequest wr, Model model){
+    public String viewAvailableCars(WebRequest wr, Model model, HttpSession session){
         String fromDate = wr.getParameter("rentCarFrom");
         String toDate = wr.getParameter("rentCarTo");
         String carType = wr.getParameter("carType");
 
-        System.out.println(fromDate);
-        System.out.println(toDate);
-        System.out.println(carType);
+        session.setAttribute("fromDate", fromDate);
+        session.setAttribute("toDate", toDate);
 
 
         List<Car> cars = carService.fetchAvailableCars(fromDate, toDate, carType);
@@ -77,10 +76,11 @@ public class HomeController {
     }
 
     @GetMapping("/rentCar/{registration_number}")
-    public String rentCar(WebRequest wr, HttpSession session,
+    public String rentCar(HttpSession session,
                           @PathVariable ("registration_number") String registration_number){
-        String fromDate = wr.getParameter("rentCarFrom");
-        String toDate = wr.getParameter("rentCarTo");
+
+        String fromDate = (String) session.getAttribute("fromDate");
+        String toDate = (String) session.getAttribute("toDate");
 
         Renter renter = (Renter) session.getAttribute("renter");//TODO TEMP
 
@@ -89,7 +89,8 @@ public class HomeController {
         contractService.rentCar(fromDate, toDate, renter.getDriverLicenseNumber(),registration_number, car.getOdometer());
 
 
-        return "home/index";
+
+        return "redirect:/";
     }
 
 
