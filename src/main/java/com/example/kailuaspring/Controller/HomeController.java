@@ -43,4 +43,14 @@ public class HomeController {
 
         return "home/index";
     }
+
+    /*@GetMapping("/registerUserButton")
+    public String registerUser(){
+        return "home/registerUser";
+    }
+    @PostMapping("/createRenter")
+    public String createRenter(){
+
+        return "home/index";
+    }*/
 }
