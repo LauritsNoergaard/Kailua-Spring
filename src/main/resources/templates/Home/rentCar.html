@@ -11,10 +11,10 @@
     <div>
         <form action="/viewAvailableCars" method="post">
             <label for="rentCarFrom">When do you want to rent the car from?</label>
-            <input type="date" id="rentCarFrom" name="rentCarFrom">
+            <input type="date" id="rentCarFrom" name="rentCarFrom" value="2023-04-24">
             <br>
             <label for="rentCarFrom">When do you want to rent the car to?</label>
-            <input type="date" id="rentCarTo" name="rentCarTo">
+            <input type="date" id="rentCarTo" name="rentCarTo" value="2023-04-25">
 
             <p>Pick the type of car you want</p>
             <select name="carType" id="">
@@ -41,12 +41,12 @@
             </thead>
 <!--        TODO: This ain't done-->
             <tr th:each="car: ${cars}">
-                <td th:text="${car.registrationNumber}" style="background-color: #6a5db8;color:white;"/>
+                <td th:text="${car.registration_number}" style="background-color: #6a5db8;color:white;"/>
                 <td th:text="${car.brand}" style="background-color: #6a5db8;color:white;"/>
                 <td th:text="${car.model}" style="background-color: #6a5db8;color:white;"/>
-                <td th:text="${car.fuelType}" style="background-color: #6a5db8;color:white;"/>
+                <td th:text="${car.fuel_type}" style="background-color: #6a5db8;color:white;"/>
                 <td th:text="${car.odometer}" style="background-color: #6a5db8;color:white;"/>
-                <td th:text="${car.registrationDate}" style="background-color: #6a5db8;color:white;"/>
+                <td th:text="${car.registration_date}" style="background-color: #6a5db8;color:white;"/>
             </tr>
         </table>
     </div>
