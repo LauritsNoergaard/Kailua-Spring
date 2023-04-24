@@ -47,6 +47,10 @@
                 <td th:text="${car.fuel_type}" style="background-color: #6a5db8;color:white;"/>
                 <td th:text="${car.odometer}" style="background-color: #6a5db8;color:white;"/>
                 <td th:text="${car.registration_date}" style="background-color: #6a5db8;color:white;"/>
+                <td>
+                    <a th:href="@{'/rentCar/'+${car.registration_number}}"></a>
+                        <button>RENT</button>
+                </td>
             </tr>
         </table>
     </div>
