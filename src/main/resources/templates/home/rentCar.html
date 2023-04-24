@@ -5,26 +5,28 @@
     <title>RentCar</title>
     <link rel="stylesheet" type="text/css" href="/MyCSS.css">
 </head>
-<body>
+<body style="background-color:#38aecc";>
+
     <h1>Rent a car</h1>
 
-    <div>
+    <div id="rentCarBox">
         <form action="/viewAvailableCars" method="post">
-            <label for="rentCarFrom">When do you want to rent the car from?</label>
-            <input type="date" id="rentCarFrom" name="rentCarFrom" value="2023-04-24">
+            <label class="registerLabel" for="rentCarFrom">When do you want to rent the car from?: </label>
+            <input class="textInput" type="date" id="rentCarFrom" name="rentCarFrom" value="2023-04-24">
             <br>
-            <label for="rentCarFrom">When do you want to rent the car to?</label>
-            <input type="date" id="rentCarTo" name="rentCarTo" value="2023-04-25">
+            <label class="registerLabel"  for="rentCarFrom">When do you want to rent the car to?: </label>
+            <input class="textInput"  type="date" id="rentCarTo" name="rentCarTo" value="2023-04-25">
 
-            <p>Pick the type of car you want</p>
-            <select name="carType" id="">
+            <p class="registerLabel">Pick the type of car you want: </p>
+            <select class="textInput"  name="carType">
                 <option value="FAMILY">Family car</option>
                 <option value="SPORT">Sports car</option>
                 <option value="LUXURY">Luxury car</option>
             </select>
-            <input type="submit" value="Search">
+            <br>
+            <input class="textInput" type="submit" value="Search" style="background-color: green; color:white;">
         </form>
-
+    </div>
 
         <table>
             <thead>
