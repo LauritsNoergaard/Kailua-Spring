@@ -68,7 +68,11 @@ public class HomeController {
 
         List<Car> cars = carService.fetchAvailableCars(fromDate, toDate, carType);
         model.addAttribute("cars", cars);
-        System.out.println(cars);
+        if(cars.size()>0){
+            System.out.println(cars.get(0).getRegistration_date());
+
+        }
+
         return "home/rentCar";
     }
 
