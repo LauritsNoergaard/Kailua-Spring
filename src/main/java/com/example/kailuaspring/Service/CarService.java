@@ -15,4 +15,8 @@ public class CarService {
     public List<Car> fetchAvailableCars(String fromDate, String toDate, String carType) {
         return carRepo.fetchAvailableCars(fromDate, toDate, carType);
     }
+
+    public Car fetchCar(String regNum) {
+        return carRepo.fetchCar(regNum);
+    }
 }
