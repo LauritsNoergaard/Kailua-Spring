@@ -35,8 +35,10 @@ public class HomeController {
         return "home/registerUser";
     }
     @PostMapping("/createRenter")
-    public String createRenter(@ModelAttribute Renter renter){
+    public String createRenter(@ModelAttribute Renter renter, HttpSession session){
         renterService.createNewRenter(renter);
+        session.setAttribute("renter", renter);
+        System.out.println(session.getAttribute("renter"));
         return "home/index";
     }
 
