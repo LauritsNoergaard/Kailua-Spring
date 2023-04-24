@@ -19,7 +19,15 @@ public class HomeController {
 
     @GetMapping("/")
     public String index() {
-        return "home/rentCar";
+        return "home/index";
+    }
+    @GetMapping("/logIn")
+    public String logIn(){
+        return "home/loginPage";
+    }
+    @GetMapping("/register")
+    public String register(){
+        return "home/registerUser";
     }
 
     @PostMapping("/viewAvailableCars")
