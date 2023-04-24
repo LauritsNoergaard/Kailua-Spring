@@ -1,12 +1,15 @@
 package com.example.kailuaspring.Controller;
 
 import com.example.kailuaspring.Model.Car;
+import com.example.kailuaspring.Model.Renter;
 import com.example.kailuaspring.Service.CarService;
+import com.example.kailuaspring.Service.RenterService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.context.request.WebRequest;
 
@@ -16,6 +19,8 @@ import java.util.List;
 public class HomeController {
     @Autowired
     CarService carService;
+    @Autowired
+    RenterService renterService;
 
     @GetMapping("/")
     public String index() {
@@ -30,8 +35,8 @@ public class HomeController {
         return "home/registerUser";
     }
     @PostMapping("/createRenter")
-    public String createRenter(){
-
+    public String createRenter(@ModelAttribute Renter renter){
+        renterService.createNewRenter(renter);
         return "home/index";
     }
 
