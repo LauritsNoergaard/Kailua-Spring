@@ -21,6 +21,14 @@ public class HomeController {
     public String index() {
         return "home/index";
     }
+    @GetMapping("/logIn")
+    public String logIn(){
+        return "home/loginPage";
+    }
+    @GetMapping("/register")
+    public String register(){
+        return "home/registerUser";
+    }
 
     @PostMapping("/viewAvailableCars")
     public String viewAvailableCars(WebRequest wr, Model model){
