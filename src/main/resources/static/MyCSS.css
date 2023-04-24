@@ -56,12 +56,12 @@ h1{
 }
 .button {
     position: absolute;
-    width: 20%;
     height: 20%;
     color: white;
     background: rgba(56, 174, 204, 0.7);
     font-size: 300%;
     border-radius: 25px;
+    padding:15px 25px 15px 25px
 }
 #box1button {
     top: 30%;
