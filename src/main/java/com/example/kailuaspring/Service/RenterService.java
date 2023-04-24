@@ -1,8 +1,15 @@
 package com.example.kailuaspring.Service;
 
-public class RenterService {
+import com.example.kailuaspring.Model.Renter;
+import com.example.kailuaspring.Repository.RenterRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-    /*public boolean createNewRenter(Renter renter){
-        return RenterRepo.create(renter);
-    }*/
+@Service
+public class RenterService {
+@Autowired
+    RenterRepo renterRepo;
+    public boolean createNewRenter(Renter renter){
+        return renterRepo.create(renter);
+    }
 }
