@@ -13,6 +13,6 @@ public class CarService {
     CarRepo carRepo;
 
     public List<Car> fetchAvailableCars(String fromDate, String toDate, String carType) {
-    return carRepo.fetchAvailableCars(fromDate, toDate, carType);
+        return carRepo.fetchAvailableCars(fromDate, toDate, carType);
     }
 }
