@@ -1,6 +1,7 @@
 package com.example.kailuaspring.Controller;
 
 import com.example.kailuaspring.Model.Car;
+import com.example.kailuaspring.Model.Contract;
 import com.example.kailuaspring.Model.Renter;
 import com.example.kailuaspring.Service.CarService;
 import com.example.kailuaspring.Service.RenterService;
@@ -69,7 +70,6 @@ public class HomeController {
         model.addAttribute("cars", cars);
         if(cars.size()>0){
             System.out.println(cars.get(0).getRegistration_date());
-
         }
 
         return "home/rentCar";
@@ -93,5 +93,12 @@ public class HomeController {
         return "redirect:/";
     }
 
+    @PostMapping("/viewContracts")
+    public String viewContracts(HttpSession session, Model model) {
+        Renter renter = (Renter) session.getAttribute("renter");
+        List<Contract> contracts = contractService.fetchContracts(renter.getDriverLicenseNumber());
+        model.addAttribute("contracts", contracts);
+        return "home/viewContracts";
+    }
 
 }

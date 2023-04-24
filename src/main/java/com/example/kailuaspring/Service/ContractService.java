@@ -17,4 +17,8 @@ public class ContractService {
         contractRepo.rentCar(fromDate,toDate,driverLCSNum,regnum,odo);
     }
 
+    public List<Contract> fetchContracts(String driverLCSnum) {
+        return contractRepo.fetchContracts(driverLCSnum);
+    }
+
 }

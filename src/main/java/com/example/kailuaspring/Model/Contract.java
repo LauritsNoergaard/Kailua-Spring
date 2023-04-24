@@ -42,11 +42,11 @@ public class Contract {
     }
 
     public String getDriverLicenseNumber() {
-        return driverLicenseNumber;
+        return driver_license_number;
     }
 
     public void setDriverLicenseNumber(String driverLicenseNumber) {
-        this.driverLicenseNumber = driverLicenseNumber;
+        this.driver_license_number = driverLicenseNumber;
     }
 
     public String getRegistration_number() {
