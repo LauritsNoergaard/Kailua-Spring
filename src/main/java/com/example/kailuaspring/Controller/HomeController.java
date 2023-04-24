@@ -3,12 +3,14 @@ package com.example.kailuaspring.Controller;
 import com.example.kailuaspring.Model.Car;
 import com.example.kailuaspring.Model.Renter;
 import com.example.kailuaspring.Service.CarService;
+import com.example.kailuaspring.Service.RenterService;
 import com.example.kailuaspring.Service.ContractService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.context.request.WebRequest;
@@ -19,6 +21,8 @@ import java.util.List;
 public class HomeController {
     @Autowired
     CarService carService;
+    @Autowired
+    RenterService renterService;
 
     @Autowired
     ContractService contractService;
@@ -27,17 +31,27 @@ public class HomeController {
     public String index() {
         return "home/index";
     }
+
     @GetMapping("/logIn")
     public String logIn(){
         return "home/loginPage";
     }
+
     @GetMapping("/register")
     public String register(){
         return "home/registerUser";
     }
-    @PostMapping("/createRenter")
-    public String createRenter(){
 
+    @PostMapping("/createRenter")
+    public String createRenter(@ModelAttribute Renter renter, HttpSession session){
+        renterService.createNewRenter(renter);
+        session.setAttribute("renter", renter);
+        System.out.println(session.getAttribute("renter"));
+        return "home/index";
+    }
+    @PostMapping("/loginUser")
+    public String logInUser(@ModelAttribute Renter renter, HttpSession session){
+        //TODO HVIS LOGIN FRA USER PASSER MED DB, SÅ SET SESSION
         return "home/index";
     }
 
