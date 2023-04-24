@@ -10,6 +10,9 @@ public class Renter {
     private String email;
     private String password;
 
+    public Renter() {
+    }
+
     public Renter(String driverLicenseNumber, String name, String address, String zip, String city, String phone,
                   String email, String password) {
         this.driverLicenseNumber = driverLicenseNumber;

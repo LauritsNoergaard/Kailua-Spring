@@ -52,7 +52,13 @@ public class HomeController {
 
     @PostMapping("/loginUser")
     public String logInUser(@ModelAttribute Renter renter, HttpSession session) {
-        session.setAttribute("renter", renter);//TODO - tjek user input med DB - IF MATCH set session attribute
+        if (renterService.login(renter)){
+            session.setAttribute("renter", renter);
+            Renter rTemp = (Renter) session.getAttribute("renter");
+            System.out.println(rTemp.getEmail() + ", " + rTemp.getPassword());
+        }else {
+            System.out.println(":(");
+        }
         return "home/index";
     }
 
