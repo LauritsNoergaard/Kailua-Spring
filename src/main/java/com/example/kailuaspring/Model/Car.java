@@ -9,6 +9,19 @@ public class Car {
     private String registrationDate;
     private Type type;
 
+    public Car() {
+    }
+
+    public Car(String registrationNumber, String brand, String model, String fuelType, int odometer, String registrationDate, Type type) {
+        this.registrationNumber = registrationNumber;
+        this.brand = brand;
+        this.model = model;
+        this.fuelType = fuelType;
+        this.odometer = odometer;
+        this.registrationDate = registrationDate;
+        this.type = type;
+    }
+
     public String getRegistrationNumber() {
         return registrationNumber;
     }
@@ -64,16 +77,4 @@ public class Car {
     public void setType(Type type) {
         this.type = type;
     }
-
-    public Car(String registrationNumber, String brand, String model, String fuelType, int odometer, String registrationDate, Type type) {
-        this.registrationNumber = registrationNumber;
-        this.brand = brand;
-        this.model = model;
-        this.fuelType = fuelType;
-        this.odometer = odometer;
-        this.registrationDate = registrationDate;
-        this.type = type;
-    }
-
-
 }

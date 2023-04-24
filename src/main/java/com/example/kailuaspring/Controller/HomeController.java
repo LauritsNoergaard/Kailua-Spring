@@ -19,7 +19,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String index() {
-        return "home/rentCar";
+        return "home/index";
     }
 
     @PostMapping("/viewAvailableCars")
@@ -35,4 +35,23 @@ public class HomeController {
         System.out.println(carType);
         return "home/rentCar";
     }
+    @GetMapping("/registerUserButton")
+    public String registerUser(){
+        return "home/registerUser";
+    }
+    @PostMapping("/createRenter")
+    public String createRenter(){
+
+        return "home/index";
+    }
+
+    /*@GetMapping("/registerUserButton")
+    public String registerUser(){
+        return "home/registerUser";
+    }
+    @PostMapping("/createRenter")
+    public String createRenter(){
+
+        return "home/index";
+    }*/
 }

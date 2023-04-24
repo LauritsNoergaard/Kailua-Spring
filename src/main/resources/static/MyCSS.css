@@ -1,5 +1,16 @@
+*{
+    font-family: Verdana;
+}
 body{
     margin: 0;
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    color:white;
+    font-family: Verdana;
+    padding: 40px 0 0 0;
+    margin: 0 0 0 0;
 }
 .top-nav {
     background-color: #022f40;
@@ -80,23 +91,28 @@ body{
 
 #registerBox{
     background-color: #022f40;
-    height: 900px;
+    height:auto;
     width: 40%;
     position: absolute;
     left: 30%;
     text-align: right;
-    padding-right: 40px;
+    padding: 20px 40px 20px 0;
+    margin: 0 0 20px 0;
+}
+.registerLabel{
+    color:white;
+    text-transform: capitalize;
 }
 .textInput{
     background-color: #0090c1;
-    height: 60px;
+    padding: 15px 10px 15px 10px;
     width: 180px;
     margin: 15px;
-
+    border:1px solid white;
 
 }
 .textInput::placeholder{
-    color: black;
+    color: #022f40;
 }
 #login-box{
     background-color: #022f40;
