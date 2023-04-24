@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 public class RenterService {
 @Autowired
     RenterRepo renterRepo;
+
     public boolean createNewRenter(Renter renter){
         return renterRepo.create(renter);
     }
