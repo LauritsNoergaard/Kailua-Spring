@@ -58,7 +58,7 @@ h1{
     position: absolute;
     height: 20%;
     color: white;
-    background: rgba(56, 174, 204, 0.7);
+    background: rgba(56, 174, 204, 0.4);
     font-size: 300%;
     border-radius: 25px;
     padding:15px 25px 15px 25px
@@ -72,7 +72,7 @@ h1{
     left: 10%;
 }
 .button:hover{
-    background: rgb(100, 149, 237);
+    background: rgb(56, 174, 204, 0.8);
 }
 #key{
     height: 200px;
