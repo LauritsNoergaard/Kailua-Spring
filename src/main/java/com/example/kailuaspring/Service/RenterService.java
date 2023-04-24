@@ -13,4 +13,7 @@ public class RenterService {
     public boolean createNewRenter(Renter renter){
         return renterRepo.create(renter);
     }
+    public boolean login(Renter renter) {
+        return renterRepo.login(renter);
+    }
 }
