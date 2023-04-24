@@ -14,6 +14,7 @@ public class CarRepo {
 
     @Autowired
     JdbcTemplate template;
+
     public List<Car> fetchAvailableCars (String from_date, String to_date, String carType){ //Should type be ENUM??
         String sql = "SELECT * FROM car" +
                 " INNER JOIN contract ON car.registration_number = contract.registration_number" +
