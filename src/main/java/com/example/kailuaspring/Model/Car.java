@@ -1,33 +1,20 @@
 package com.example.kailuaspring.Model;
 
 public class Car {
-    private String registrationNumber;
+    private String registration_number;
     private String brand;
     private String model;
-    private String fuelType;
+    private String fuel_type;
     private int odometer;
-    private String registrationDate;
+    private String registration_date;
     private Type type;
 
-    public Car() {
+    public String getRegistration_number() {
+        return registration_number;
     }
 
-    public Car(String registrationNumber, String brand, String model, String fuelType, int odometer, String registrationDate, Type type) {
-        this.registrationNumber = registrationNumber;
-        this.brand = brand;
-        this.model = model;
-        this.fuelType = fuelType;
-        this.odometer = odometer;
-        this.registrationDate = registrationDate;
-        this.type = type;
-    }
-
-    public String getRegistrationNumber() {
-        return registrationNumber;
-    }
-
-    public void setRegistrationNumber(String registrationNumber) {
-        this.registrationNumber = registrationNumber;
+    public void setRegistration_number(String registration_number) {
+        this.registration_number = registration_number;
     }
 
     public String getBrand() {
@@ -46,12 +33,12 @@ public class Car {
         this.model = model;
     }
 
-    public String getFuelType() {
-        return fuelType;
+    public String getFuel_type() {
+        return fuel_type;
     }
 
-    public void setFuelType(String fuelType) {
-        this.fuelType = fuelType;
+    public void setFuel_type(String fuel_type) {
+        this.fuel_type = fuel_type;
     }
 
     public int getOdometer() {
@@ -62,12 +49,12 @@ public class Car {
         this.odometer = odometer;
     }
 
-    public String getRegistrationDate() {
-        return registrationDate;
+    public String getRegistration_date() {
+        return registration_date;
     }
 
-    public void setRegistrationDate(String registrationDate) {
-        this.registrationDate = registrationDate;
+    public void setRegistration_date(String registration_date) {
+        this.registration_date = registration_date;
     }
 
     public Type getType() {
@@ -77,4 +64,20 @@ public class Car {
     public void setType(Type type) {
         this.type = type;
     }
+
+    public Car(String registration_number, String brand, String model, String fuel_type, int odometer, String registration_date, Type type) {
+        this.registration_number = registration_number;
+        this.brand = brand;
+        this.model = model;
+        this.fuel_type = fuel_type;
+        this.odometer = odometer;
+        this.registration_date = registration_date;
+        this.type = type;
+    }
+
+    public Car(){
+
+    }
+
+
 }
