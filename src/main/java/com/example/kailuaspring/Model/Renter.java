@@ -8,8 +8,10 @@ public class Renter {
     private String city;
     private String phone;
     private String email;
+    private String password;
 
-    public Renter(String driverLicenseNumber, String name, String address, String zip, String city, String phone, String email) {
+    public Renter(String driverLicenseNumber, String name, String address, String zip, String city, String phone,
+                  String email, String password) {
         this.driverLicenseNumber = driverLicenseNumber;
         this.name = name;
         this.address = address;
@@ -17,6 +19,7 @@ public class Renter {
         this.city = city;
         this.phone = phone;
         this.email = email;
+        this.password = password;
     }
 
     public String getDriverLicenseNumber() {
@@ -73,5 +76,12 @@ public class Renter {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

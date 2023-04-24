@@ -26,14 +26,17 @@ public class HomeController {
     public String index() {
         return "home/index";
     }
+
     @GetMapping("/logIn")
     public String logIn(){
         return "home/loginPage";
     }
+
     @GetMapping("/register")
     public String register(){
         return "home/registerUser";
     }
+
     @PostMapping("/createRenter")
     public String createRenter(@ModelAttribute Renter renter, HttpSession session){
         renterService.createNewRenter(renter);
