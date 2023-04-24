@@ -31,4 +31,13 @@ public class RenterRepo {
             return false;
         }
     }
+    public Renter setLoggedInUser(Renter renter){
+        String sql = "SELECT * FROM kailua.renter WHERE email = ? AND password = ?";
+        RowMapper<Renter> rm = new BeanPropertyRowMapper<>(Renter.class);
+        Renter loggedInRenter = template.queryForObject(sql, rm, renter.getDriverLicenseNumber(),renter.getName(),
+                renter.getAddress(), renter.getZip(), renter.getCity(),renter.getPhone(), renter.getEmail(),
+                renter.getPassword());
+        System.out.println("DEBUG city: " + loggedInRenter.getCity());
+        return loggedInRenter;
+    }
 }
