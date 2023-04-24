@@ -44,6 +44,11 @@ public class HomeController {
         System.out.println(session.getAttribute("renter"));
         return "home/index";
     }
+    @PostMapping("/loginUser")
+    public String logInUser(@ModelAttribute Renter renter, HttpSession session){
+        //TODO HVIS LOGIN FRA USER PASSER MED DB, SÅ SET SESSION
+        return "home/index";
+    }
 
     @PostMapping("/viewAvailableCars")
     public String viewAvailableCars(WebRequest wr, Model model){
