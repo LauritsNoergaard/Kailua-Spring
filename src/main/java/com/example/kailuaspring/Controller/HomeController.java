@@ -28,11 +28,14 @@ public class HomeController {
         String toDate = wr.getParameter("rentCarTo");
         String carType = wr.getParameter("carType");
 
-        List<Car> lists = carService.fetchAvailableCars(fromDate, toDate, carType);
-        model.addAttribute("lists", lists);
         System.out.println(fromDate);
         System.out.println(toDate);
         System.out.println(carType);
+
+
+        List<Car> cars = carService.fetchAvailableCars(fromDate, toDate, carType);
+        model.addAttribute("cars", cars);
+        System.out.println(cars);
         return "home/rentCar";
     }
 }

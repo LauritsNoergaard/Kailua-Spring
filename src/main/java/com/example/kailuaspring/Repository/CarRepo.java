@@ -16,10 +16,10 @@ public class CarRepo {
     JdbcTemplate template;
     public List<Car> fetchAvailableCars (String from_date, String to_date, String carType){ //Should type be ENUM??
         String sql = "SELECT * FROM car" +
-                "INNER JOIN contract ON car.registration_number = contract.registration_number" +
-                "WHERE from_date_time > '?' OR to_date_time < '?' AND rental_type = '?';";
+                " INNER JOIN contract ON car.registration_number = contract.registration_number" +
+                " WHERE from_date_time > '?' OR to_date_time < '?' AND rental_type = '?'";
         RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
-        List<Car> lists = template.query(sql, rowMapper, to_date, from_date, carType);
-        return lists;
+        List<Car> cars = template.query(sql, rowMapper, to_date, from_date, carType);
+        return cars;
     }
 }

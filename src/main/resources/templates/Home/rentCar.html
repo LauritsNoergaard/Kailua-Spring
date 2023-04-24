@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>RentCar</title>
@@ -25,12 +25,30 @@
             <input type="submit" value="Search">
         </form>
 
-        <tr th:each="car: ${cars}">
-            <td th:text="${wish.wish_name}" style="background-color: #6a5db8;color:white;"/>
-            <td th:text="${wish.wish_desc}" style="background-color: #6a5db8;color:white;"/>
-            <td th:text="${wish.wish_price}" style="background-color: #6a5db8;color:white;"/>
-            <td th:text="${wish.wish_link}" style="background-color: #6a5db8;color:white;"/>
-        </tr>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Registration number</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Fuel type</th>
+                <th>Miles</th>
+                <th>Registration date</th>
+
+            </tr>
+
+            </thead>
+<!--        TODO: This ain't done-->
+            <tr th:each="car: ${cars}">
+                <td th:text="${car.registrationNumber}" style="background-color: #6a5db8;color:white;"/>
+                <td th:text="${car.brand}" style="background-color: #6a5db8;color:white;"/>
+                <td th:text="${car.model}" style="background-color: #6a5db8;color:white;"/>
+                <td th:text="${car.fuelType}" style="background-color: #6a5db8;color:white;"/>
+                <td th:text="${car.odometer}" style="background-color: #6a5db8;color:white;"/>
+                <td th:text="${car.registrationDate}" style="background-color: #6a5db8;color:white;"/>
+            </tr>
+        </table>
     </div>
 
 </body>
