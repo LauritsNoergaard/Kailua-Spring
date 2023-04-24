@@ -33,30 +33,31 @@ public class HomeController {
     }
 
     @GetMapping("/logIn")
-    public String logIn(){
+    public String logIn() {
         return "home/loginPage";
     }
 
     @GetMapping("/register")
-    public String register(){
+    public String register() {
         return "home/registerUser";
     }
 
     @PostMapping("/createRenter")
-    public String createRenter(@ModelAttribute Renter renter, HttpSession session){
+    public String createRenter(@ModelAttribute Renter renter, HttpSession session) {
         renterService.createNewRenter(renter);
         session.setAttribute("renter", renter);
-        System.out.println(session.getAttribute("renter"));
+        System.out.println("DEBUG: " + session.getAttribute("renter"));
         return "home/index";
     }
+
     @PostMapping("/loginUser")
-    public String logInUser(@ModelAttribute Renter renter, HttpSession session){
-        //TODO HVIS LOGIN FRA USER PASSER MED DB, SÅ SET SESSION
+    public String logInUser(@ModelAttribute Renter renter, HttpSession session) {
+        session.setAttribute("renter", renter);//TODO - tjek user input med DB - IF MATCH set session attribute
         return "home/index";
     }
 
     @PostMapping("/viewAvailableCars")
-    public String viewAvailableCars(WebRequest wr, Model model){
+    public String viewAvailableCars(WebRequest wr, Model model) {
         String fromDate = wr.getParameter("rentCarFrom");
         String toDate = wr.getParameter("rentCarTo");
         String carType = wr.getParameter("carType");
