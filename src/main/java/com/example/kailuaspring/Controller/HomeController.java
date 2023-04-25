@@ -53,7 +53,9 @@ public class HomeController {
     @PostMapping("/loginUser")
     public String logInUser(@ModelAttribute Renter renter, HttpSession session) {
         if (renterService.login(renter)){
-            session.setAttribute("renter", renterService.setLoggedInUser(renter)); //TODO denne linje virker ikke
+            renter = renterService.setLoggedInRenter(renter);//TODO denne linje virker ikke
+            session.setAttribute("renter", renter);
+
             Renter rTemp = (Renter) session.getAttribute("renter");
             System.out.println(rTemp.getEmail() + ", " + rTemp.getPassword());
         }else {
